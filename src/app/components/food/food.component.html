@@ -1,0 +1,16 @@
+<!-- food-item.component.html -->
+<div class="food-container">
+    <div class="food-price">{{ food?.price | currency:'EUR':'symbol-narrow' }}</div>
+    <div class="food-name">{{ food?.name }}</div>
+    <div class="food-actions">
+      <button (click)="add()">+</button>
+      <button (click)="remove()">-</button>
+    </div>
+
+    <div class="food-extras" *ngFor="let extra of currentFood?.extras">
+      <app-food-extra [foodExtra]="extra" [food]="currentFood!"></app-food-extra>
+    </div>  
+ 
+  </div>
+  
+  

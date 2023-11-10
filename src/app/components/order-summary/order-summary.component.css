@@ -1,0 +1,105 @@
+.order-summary-table {
+  width: 30%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #ffffff; /* Beyaz arka plan */
+  font-family: Inter;
+
+  
+}
+
+.order-summary-table th,
+.order-summary-table td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 12px; /* Genel font büyüklüğü */
+  font-weight: 500; /* Genel font kalınlığı */
+  line-height: 15px; /* Genel satır yüksekliği */
+  letter-spacing: 0px; /* Genel harf aralığı */
+}
+.order-summary-table tbody{
+  max-height: 400px; /* Tablonun maksimum yüksekliğini sınırlar */
+  overflow-y: auto;
+  border-collapse: collapse;
+
+}
+
+.order-summary-table th {
+  background-color: #2d333f; /* Başlık arka plan */
+  color: #ffffff; /* Başlık yazı rengi */
+  font-weight: 600; /* Başlık font kalınlığı */
+}
+
+.order-summary-table tr:nth-child(even) {
+  background-color: #e7ecf2; /* Çift sıraların arka plan rengi */
+}
+
+.order-summary-table tr:hover {
+  background-color: #35bcaa; /* Üzerine gelindiğinde sıraların arka plan rengi */
+}
+
+.total-price {
+  text-align: right;
+  font-size: 16px; /* Toplam fiyat font büyüklüğü */
+  font-weight: 500; /* Toplam fiyat font kalınlığı */
+  line-height: 19px; /* Toplam fiyat satır yüksekliği */
+  letter-spacing: 0em; /* Toplam fiyat harf aralığı */
+  background: #dc3545; /* Toplam fiyat arka plan rengi */
+  color: #ffffff; /* Toplam fiyat yazı rengi */
+}
+
+.cancel-button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid #dc3545;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.cancel-button-text {
+  color: #dc3545;
+  font-size: 14px;
+  font-family: "Inter", sans-serif; /* Ensure 'Inter' font is loaded in your project */
+  font-weight: 500;
+  word-wrap: break-word;
+  text-align: center; /* To center the text inside the button */
+}
+
+.total-price-value {
+  width: 347px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 0px 0px 4px 4px;
+  background: var(--Text-Main-Color, #2d333f);
+}
+
+.total-price-value-text {
+  display: flex; /* Flexbox modelini kullanarak */
+  justify-content: center; /* Metni yatay olarak ortalar */
+  align-items: center; /* Metni dikey olarak ortalar */
+  color: #35bcaa;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  word-wrap: break-word; /* Uzun kelime taşmalarını önlemek için */
+  height: 100%; /* Ebeveyn elementin yüksekliğini dolduracak şekilde ayarlayın */
+  text-align: center; /* Metni yatay olarak ortalar, tek satır için kullanılır */
+}
+
+.order-summary-container {
+
+  background: #ffffff;
+  font-family: Inter;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.cancel-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

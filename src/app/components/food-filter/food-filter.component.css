@@ -1,0 +1,40 @@
+.filter-wrapper {
+  /* Additional wrapper styles if necessary */
+}
+
+.category-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.category-item {
+  width: 151px; /* as per your provided style */
+  height: 44px;
+  background: #e7ecf2;
+  border-radius: 4px;
+  margin-bottom: 10px; /* space between items */
+  display: flex;
+  align-items: center; /* vertical center */
+  justify-content: center; /* horizontal center */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.category-item:last-child {
+  margin-bottom: 0; /* remove bottom margin from the last item */
+}
+
+.category-item:hover {
+  background-color: darken(#e7ecf2, 10%); /* Slightly darken on hover */
+}
+.category-title {
+  width: 151px;
+  height: 44px;
+  background: #2d333f;
+  border-radius: 4px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

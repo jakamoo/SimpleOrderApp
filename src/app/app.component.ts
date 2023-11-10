@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'simple-order-app';
+  category?: string;  // Define the category property here
+
+  updateCategoryFromEvent(newCategory: string) {
+    this.category = newCategory;
+  }
 }

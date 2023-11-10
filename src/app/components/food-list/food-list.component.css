@@ -1,0 +1,13 @@
+.food-list-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px; /* Aralığı azalt */
+    padding: 10px; /* Dış padding */
+    height: 500px; /* Örnek olarak belirlenmiş bir yükseklik, ihtiyacınıza göre ayarlayın */
+    overflow-y: auto; /* Gerektiğinde dikey kaydırma çubuğunu göster */
+}
+
+.food {
+    /* Flex özelliğini kullanmıyorsanız bu kısma gerek yok */
+    margin-bottom: 10px; /* Alt margini azalt */
+}

@@ -1,0 +1,58 @@
+/* Food Item Styles */
+.food-extra-container {
+    background: #E7ECF2;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  .food-extra-price,
+  .food-extra-name {
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    margin: 0; /* Reset margin for consistency */
+  }
+  
+  .food-extra-price {
+    color: #D80027;
+    font-size: 10px;
+    margin: 5px;
+  }
+  
+  .food-extra-name {
+    font-size: 10px;
+    color: #2D333F;
+    word-wrap: break-word;
+  }
+  
+  .food-extra-actions {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Spacing between text and buttons */
+  }
+  
+  /* Button Styles */
+  button {
+    width: 25px; /* Adjusted for better clickability */
+    height: 25px; /* Adjusted for better clickability */
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #ddd; /* Add border for definition */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  
+  button.food-extra-add {
+    margin-right: 5px;
+  }
+  
+  button.food-extra-remove {
+    background-color: #35BCAA;
+    color: white; /* For better visibility against the background */
+  }
+  

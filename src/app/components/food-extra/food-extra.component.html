@@ -1,0 +1,8 @@
+<div class="food-extra-container">
+    <div class="food-extra-price">{{ foodExtra.price | currency:'EUR':'symbol-narrow' }}</div>
+    <div class="food-extra-name">{{ foodExtra.name }}</div>
+    <div class="food-extra-actions">
+      <button (click)="add()">+</button>
+      <button (click)="remove()">-</button>
+</div>
+  

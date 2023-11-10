@@ -1,0 +1,56 @@
+/* Food Item Styles */
+.food-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures that header and footer are pushed to the top and bottom */
+  width: 200px;
+  min-height: 120px;
+  background: #E7ECF2;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Rest of your CSS */
+
+
+.food-price,
+.food-name {
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+}
+
+.food-price {
+  color: #D80027;
+  font-size: 10px;
+}
+
+.food-name {
+  font-size: 14px;
+  color: #2D333F;
+  word-wrap: break-word;
+}
+
+.food-actions {
+  display: flex;
+  justify-content: space-between; /* Distribute buttons evenly */
+  width: 100%; /* Take the full width of the container */
+  padding-top: 10px; /* Add some padding on top of the action buttons */
+}
+
+/* Button Styles */
+button {
+  flex: 1; /* Each button will take up equal space */
+  height: 27px;
+  background: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px; /* Add margin to the left and right */
+}
+
+button:first-child {
+  background-color: #35BCAA;
+}
+

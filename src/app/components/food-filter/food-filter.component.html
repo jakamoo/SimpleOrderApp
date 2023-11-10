@@ -1,0 +1,19 @@
+<!-- food-filter.component.html -->
+<div class="filter-wrapper">
+    <!-- Product Category Title -->
+    <div class="category-title">
+      Product Category
+    </div>
+  
+    <!-- Category List -->
+    <ul class="category-list">
+      <li class="category-item" (click)="updateCategory('All')">All</li>
+      <!-- The rest of the items generated with *ngFor directive -->
+      <li *ngFor="let category of categories" 
+          class="category-item" 
+          (click)="updateCategory(category.name)">
+        {{ category.name }}
+      </li>
+    </ul>
+  </div>
+  

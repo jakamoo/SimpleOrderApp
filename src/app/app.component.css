@@ -1,0 +1,31 @@
+/* This is the Flexbox container */
+.container {
+    display: flex;
+    justify-content: space-between; /* Bu sefer her bir sütun arasındaki boşluk önemsiz hale gelecek */
+    align-items: stretch; /* Çocukları konteynerin yüksekliğine uyacak şekilde uzatır */
+    padding: 20px;
+    box-sizing: border-box; /* Padding'i genişliğe dahil eder */
+    height: 100vh; /* Örnek için konteynerin tam ekran yüksekliğinde olmasını sağlar */
+  }
+  
+  /* This is for each child */
+  .left, .center, .right {
+    box-sizing: border-box; /* Padding ve border genişliğe dahil edilir */
+    flex: 0 0 33.333%; /* büyüme yok, küçülme yok, her biri %33.333 genişlikte */
+    padding: 0 10px; /* İç boşluklar */
+    height: 100%; /* Çocukların yüksekliği konteynerle aynı olsun */
+  }
+  
+  /* Additional styles if needed */
+  .left {
+    /* Specific styles for left component */
+  }
+  
+  .center {
+    /* Specific styles for center component */
+  }
+  
+  .right {
+    /* Specific styles for right component */
+  }
+  

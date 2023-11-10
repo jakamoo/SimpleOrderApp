@@ -1,0 +1,2769 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "Order",
+            "id": "interface-Order-6c40c6852c421cf44463d928b7736fda4071c958b75e8177014051fcba02979711ae9c2225042e90575ac6ed7ef24f0294571d4ccb66c7e2a2565550293c802f",
+            "file": "src/app/shared/models/Order.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Order{\n    id:number;\n    plu: number;\n    quantity: number;\n    extras: number[]; \n  }\n  ",
+            "properties": [
+                {
+                    "name": "extras",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "plu",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "quantity",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "User",
+            "id": "interface-User-9c7e5f1bbbab702cb032307d130876cb68969b0cd4eedef32a0c8cad8081a54e5f8f577ed6ad4539c1b99a1d246cb34031d198c2ea8eba440e64e91b14f01fdc",
+            "file": "src/stories/User.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface User {}\n",
+            "properties": [],
+            "indexSignatures": [],
+            "methods": [],
+            "extends": []
+        }
+    ],
+    "injectables": [
+        {
+            "name": "CategoryService",
+            "id": "injectable-CategoryService-94f47bf575bb8bf1ef103f802a9ad7d80fb4b6c6edeaa92aeb3ba5e3237c9a31f4ddaf94ad39423b3b50e87be78fccfa447637e43a9d54264463d8cc7950e13e",
+            "file": "src/app/services/category/category.service.ts",
+            "properties": [],
+            "methods": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class CategoryService {\n\n  constructor() { }\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 6
+            },
+            "extends": [],
+            "type": "injectable"
+        },
+        {
+            "name": "FoodBasketService",
+            "id": "injectable-FoodBasketService-f50af158c5d6b05b8fe65d0887e63ff043f3e1e3f7556d9de57e6f3874e21aae5a7dc5566a84705d45f1007876ff21e80617a6fe1ef59f028796bf45417ea366",
+            "file": "src/app/services/food-basket/food-basket.service.ts",
+            "properties": [
+                {
+                    "name": "foodsInBasket$",
+                    "defaultValue": "this.foodsInBasketSubject.asObservable()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "foodsInBasketSubject",
+                    "defaultValue": "new BehaviorSubject<Food[]>([])",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 14,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methods": [
+                {
+                    "name": "addToBasket",
+                    "args": [
+                        {
+                            "name": "newFood",
+                            "type": "Food",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 44,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "newFood",
+                            "type": "Food",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "clearBasket",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 81,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "getFoodsInBasket",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 76,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "isEqual",
+                    "args": [
+                        {
+                            "name": "array1",
+                            "type": "any[]",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "array2",
+                            "type": "any[]",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "boolean",
+                    "typeParameters": [],
+                    "line": 67,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "array1",
+                            "type": "any[]",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "array2",
+                            "type": "any[]",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "removeFromBasket",
+                    "args": [
+                        {
+                            "name": "plu",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 19,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "plu",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\nimport { Food } from 'src/app/shared/models/Food';\nimport { FoodExtra } from 'src/app/shared/models/FoodExtra';\nimport { BehaviorSubject } from 'rxjs';\n\n\n@Injectable({\n  providedIn: 'root'\n})\n\nexport class FoodBasketService {\n \n  \n  private foodsInBasketSubject = new BehaviorSubject<Food[]>([]);\n  foodsInBasket$ = this.foodsInBasketSubject.asObservable();\n\n  constructor() { }\n\n  removeFromBasket(plu: number): void {\n  const currentFoods = this.foodsInBasketSubject.value;\n  const updatedFoods = currentFoods.reduce((acc, food) => {\n    // Check if this is the food to update\n    if (food.plu === plu) {\n      // Use nullish coalescing to default to 0 if quantity is null/undefined\n      const currentQuantity = food.quantity ?? 0;\n      // If the food has a quantity greater than 1, decrement it\n      if (currentQuantity > 1) {\n        acc.push({ ...food, quantity: currentQuantity - 1 });\n      } // If quantity is 1 or less, do not add it back (effectively removing it)\n    } else {\n      // If not the food to update, just add it back to the accumulator\n      acc.push(food);\n    }\n    return acc;\n  }, [] as Food[]); // Start the accumulator as an array of Food\n  \n  // Publish the updated basket\n  this.foodsInBasketSubject.next(updatedFoods);\n}\n\n  \n  \n\naddToBasket(newFood: Food): void {\n  const currentFoods = this.foodsInBasketSubject.value;\n  \n  // Önce PLU'ya göre bulmaya çalış\n  let existingFoodIndex = currentFoods.findIndex(food => food.plu === newFood.plu && this.isEqual(food.extras, newFood.extras));\n  if (existingFoodIndex !== -1) {\n    // Eğer aynı PLU ve aynı extralar varsa, miktarını arttır\n    console.log(\"equal\")\n    console.log(newFood.extras)\n    const existingQuantity = currentFoods[existingFoodIndex].quantity ?? 0;\n    currentFoods[existingFoodIndex].quantity = existingQuantity + 1;\n  } else {\n    // Yeni yemek, miktarı 1 olarak ayarla ve sepete ekle\n    newFood.quantity = 1;\n    currentFoods.push(newFood);\n  }\n  \n  this.foodsInBasketSubject.next([...currentFoods]);\n}\n\n// ...\n\n// isEqual fonksiyonunuzu lodash'den almak yerine kendiniz yazmak isterseniz:\n isEqual(array1: any[], array2: any[]): boolean {\n  for (let i = 0; i < array1.length; i++) {\n    if (array1[i].quantity!==array2[i].quantity) return false;\n  }\n  return true;\n}\n  \n  \n\n  getFoodsInBasket(){\n    console.log(this.foodsInBasket$);\n    return this.foodsInBasket$;\n  }\n\n  clearBasket(): void {\n    this.foodsInBasketSubject.next([]); // Sepeti boşalt\n  }\n}  \n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 15
+            },
+            "extends": [],
+            "type": "injectable"
+        },
+        {
+            "name": "FoodService",
+            "id": "injectable-FoodService-cf67f45bc39f7b39f33ce5b10fc06a40fad1503f63428e68f34c1294f5eb501526b23adc8e0746601b98295500719e1382743bb21838c048b57069e01af5acf1",
+            "file": "src/app/services/food/food.service.ts",
+            "properties": [
+                {
+                    "name": "foods",
+                    "defaultValue": "FOODS_MOCK",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Food[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 10,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methods": [
+                {
+                    "name": "getAll",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Food[]",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "getAllFoodsByCategory",
+                    "args": [
+                        {
+                            "name": "category",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Food[]",
+                    "typeParameters": [],
+                    "line": 27,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "category",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getAllFoodsBySearchTerm",
+                    "args": [
+                        {
+                            "name": "searchTerm",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Food[]",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "searchTerm",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getFoodByPlu",
+                    "args": [
+                        {
+                            "name": "plu",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Food",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "plu",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\nimport { Food } from '../../shared/models/Food';\nimport { FOODS_MOCK } from 'src/app/mocks/food.mock'; \n\n\n@Injectable({\n  providedIn: 'root',\n})\nexport class FoodService {\n  private foods: Food[] = FOODS_MOCK; // Use the mock data\n\n \n  private getAll(): Food[] {\n    return this.foods; // Use the mock data array\n  }\n\n  getFoodByPlu(plu: number): Food{\n    return this.getAll().find(food => food.plu === plu)!;\n  }\n  \n  getAllFoodsBySearchTerm(searchTerm: string): Food[] {\n    return this.getAll().filter(food =>\n      food.name.toLowerCase().includes(searchTerm.toLowerCase())\n    );\n  }\n\n  getAllFoodsByCategory(category: string): Food[] {\n    const filteredFoods = this.getAll().filter(food =>\n      category === 'all' ? true : food.category?.toLowerCase() === category.toLowerCase()\n    );\n    \n  \n    \n    return filteredFoods;\n  }\n  \n  \n\n}\n",
+            "extends": [],
+            "type": "injectable"
+        }
+    ],
+    "guards": [],
+    "interceptors": [],
+    "classes": [
+        {
+            "name": "Category",
+            "id": "class-Category-8a2df7eb960debc369d68fb25a88e5f6fc2b7eb62888ad484ec7f29f4d885bdda19e10490e5d90b38b619b0b536f2d6a39b62d266368ef2b1cbb8aeca82a20fd",
+            "file": "src/app/shared/models/Category.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "export class Category{\n    id?: number\n    name!: string\n    description?: string\n}\n",
+            "properties": [
+                {
+                    "name": "description",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": true,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "methods": [],
+            "indexSignatures": [],
+            "extends": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        },
+        {
+            "name": "Food",
+            "id": "class-Food-2fd8b68185bf15c6af08d65233917afdcdc06579b227537e95e3100a82300100efa303f9acf8bd2ea00e69342a44a8ed6f374f8c7733931b60ef54f8511c263b",
+            "file": "src/app/shared/models/Food.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "import { FoodExtra } from \"./FoodExtra\";\n\nexport class Food{\n    plu!:number;\n    name!:string;\n    price!:number;\n    extras: FoodExtra[] = [];\n    category!: string;\n    quantity?: number;\n\n    constructor(data?: any) {\n        this.plu = data?.plu;\n        this.name = data?.name;\n        this.price = data?.price;\n        this.category = data?.category;\n        if (Array.isArray(data?.extras)) {\n            this.extras = data.extras.map((e: any) => new FoodExtra(e));\n          } else {\n            this.extras = [];\n          }\n      }\n\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "data",
+                        "type": "any",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "optional": true
+                    }
+                ],
+                "line": 9,
+                "jsdoctags": [
+                    {
+                        "name": "data",
+                        "type": "any",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "optional": true,
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "properties": [
+                {
+                    "name": "category",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "extras",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "FoodExtra[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "plu",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "price",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "quantity",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": true,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methods": [],
+            "indexSignatures": [],
+            "extends": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        },
+        {
+            "name": "FoodExtra",
+            "id": "class-FoodExtra-53bf5969ce744eba93d03adbf31a0ea4cfdff13eb6cdf8c30b0acf7b62c04c498f06502053fd72079d9069bc085969d4fe83f7ab50bbfaef2dcd5b2786289b94",
+            "file": "src/app/shared/models/FoodExtra.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "export class FoodExtra{\n    plu!:number;\n    name!:string;\n    price!:number;\n    quantity?:number; \n\n    constructor(data?: any) {\n        this.plu = data?.plu;\n        this.name = data?.name;\n        this.price = data?.price;\n        this.quantity = data?.quantity; \n      }\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "data",
+                        "type": "any",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "optional": true
+                    }
+                ],
+                "line": 5,
+                "jsdoctags": [
+                    {
+                        "name": "data",
+                        "type": "any",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "optional": true,
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "properties": [
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "plu",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "price",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "quantity",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": true,
+                    "description": "",
+                    "line": 5
+                }
+            ],
+            "methods": [],
+            "indexSignatures": [],
+            "extends": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        },
+        {
+            "name": "MockFoodBasketService",
+            "id": "class-MockFoodBasketService-094a3fa113add3a841fb741b6763a201ad490f827008c1a84cd5cd8a5236c753c5b1a779b8bbcea995fd81e9acb95133cc9e6f4eb569cd30f4ad07b9ac70d5ce",
+            "file": "src/app/components/food/food.component.stories.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "import { moduleMetadata, Story, Meta } from '@storybook/angular';\nimport { FoodComponent } from './food.component';\nimport { FoodBasketService } from 'src/app/services/food-basket/food-basket.service';\nimport { Food } from 'src/app/shared/models/Food';\n\n// Mock FoodBasketService\nclass MockFoodBasketService {\n  addToBasket(food: Food) {\n    // Mock implementation\n  }\n  removeFromBasket(plu: number) {\n    // Mock implementation\n  }\n}\n\nexport default {\n  title: 'FoodComponent',\n  component: FoodComponent,\n  decorators: [\n    moduleMetadata({\n      providers: [{ provide: FoodBasketService, useClass: MockFoodBasketService }],\n      // Herhangi bir Angular modülüne ihtiyaç duyuyorsanız buraya ekleyin\n    }),\n  ],\n} as Meta<FoodComponent>;\n\nconst Template: Story<FoodComponent> = (args: FoodComponent) => ({\n  props: args,\n});\n\nexport const Default = Template.bind({});\nDefault.args = {\n  food: {\n    plu: 123,\n    name: 'Margherita Pizza',\n    price: 10.0,\n    category: 'Italian',\n    quantity: 1,\n    extras:[]\n    // Burada gerekirse ekstra özellikler ekleyebilirsiniz\n  }\n};\n\n// Daha fazla hikaye, bileşenin farklı senaryolarda nasıl davrandığını göstermek için eklenebilir.\n",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "addToBasket",
+                    "args": [
+                        {
+                            "name": "food",
+                            "type": "Food",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 8,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "food",
+                            "type": "Food",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "removeFromBasket",
+                    "args": [
+                        {
+                            "name": "plu",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 11,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "plu",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "indexSignatures": [],
+            "extends": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        }
+    ],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-16f743e1b30f2ed856a5749586bdc12c7fe7b1201b6a050a73f1f71712d725fecaa82415d612904d26e918bf1beea112826216e30b8ebe43e9930dc661216abe",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "category",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "updateCategoryFromEvent",
+                    "args": [
+                        {
+                            "name": "newCategory",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 11,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "newCategory",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  category?: string;  // Define the category property here\n\n  updateCategoryFromEvent(newCategory: string) {\n    this.category = newCategory;\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "/* This is the Flexbox container */\n.container {\n    display: flex;\n    justify-content: space-between; /* Bu sefer her bir sütun arasındaki boşluk önemsiz hale gelecek */\n    align-items: stretch; /* Çocukları konteynerin yüksekliğine uyacak şekilde uzatır */\n    padding: 20px;\n    box-sizing: border-box; /* Padding'i genişliğe dahil eder */\n    height: 100vh; /* Örnek için konteynerin tam ekran yüksekliğinde olmasını sağlar */\n  }\n  \n  /* This is for each child */\n  .left, .center, .right {\n    box-sizing: border-box; /* Padding ve border genişliğe dahil edilir */\n    flex: 0 0 33.333%; /* büyüme yok, küçülme yok, her biri %33.333 genişlikte */\n    padding: 0 10px; /* İç boşluklar */\n    height: 100%; /* Çocukların yüksekliği konteynerle aynı olsun */\n  }\n  \n  /* Additional styles if needed */\n  .left {\n    /* Specific styles for left component */\n  }\n  \n  .center {\n    /* Specific styles for center component */\n  }\n  \n  .right {\n    /* Specific styles for right component */\n  }\n  ",
+                    "styleUrl": "./app.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<!-- Assuming this is within your app.component.html or a similar file -->\n\n<div class=\"container\">\n    <div class=\"left\">\n      <app-order-summary></app-order-summary>\n    </div>\n    <div class=\"right\">\n        <app-food-list [category]=\"category\"></app-food-list>\n      </div>\n    <div class=\"center\">\n      <app-food-filter (selectedCategory)=\"updateCategoryFromEvent($event)\"></app-food-filter>\n    </div>\n\n  </div>\n  "
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-a53fd738b978780d39fb5fcc9ae4cfe0088e57a1f6ce674862d57dab9192140bd1c05548a9910db0469a431142886e658ff2e761f15781b2ad430e58d64724d0",
+            "file": "src/stories/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-button",
+            "styleUrls": [
+                "./button.css"
+            ],
+            "styles": [],
+            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat background color to use\n",
+                    "description": "<p>What background color to use</p>\n",
+                    "line": 28,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 786,
+                            "end": 799,
+                            "flags": 16842752,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 334,
+                            "tagName": {
+                                "pos": 787,
+                                "end": 795,
+                                "flags": 16842752,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 80,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nButton contents\n\n",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 42,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "primary",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
+                    "description": "<p>Is this the principal call to action on the page?</p>\n",
+                    "line": 22,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nHow large should the button be?\n",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 34,
+                    "type": "\"small\" | \"medium\" | \"large\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 48,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  imports: [CommonModule],\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.css'],\n})\nexport default class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
+                    "styleUrl": "./button.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 50
+                    }
+                }
+            }
+        },
+        {
+            "name": "FoodComponent",
+            "id": "component-FoodComponent-fbeffde21b0c81dae1e3ef95db43a4321fe7882aa7a8fa563fd84fd0cb6a2967142d0d31409fd0c2bb695df5c81d73b7dde2cda1e58d367f9f4c12a2e752f030",
+            "file": "src/app/components/food/food.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-food",
+            "styleUrls": [
+                "./food.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./food.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "food",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "Food",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "currentFood",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Food",
+                    "optional": true,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "add",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 24,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 20,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "remove",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 34,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';\nimport { Food } from 'src/app/shared/models/Food';\nimport { FoodBasketService } from 'src/app/services/food-basket/food-basket.service';\n\n\n@Component({\n  selector: 'app-food',\n  templateUrl: './food.component.html',\n  styleUrls: ['./food.component.css']\n})\nexport class FoodComponent implements OnInit {\n  \n  @Input() food!: Food;\n  currentFood?:Food;\n\n\n  constructor(private foodBasketService: FoodBasketService) {\n\n  }\n  ngOnInit(): void {\n    this.currentFood = new Food(this.food);\n  }\n\n  add() {\n    if (this.currentFood) {\n      this.foodBasketService.addToBasket(this.currentFood);\n    }else{\n      console.log(\"Error: when add , food is empty\")\n    }\n    this.currentFood = new Food(this.food);\n \n  }\n\n  remove() {\n    if (this.currentFood) {\n      this.foodBasketService.removeFromBasket(this.currentFood.plu);\n    }\n    else{\n      console.log(\"Error: when  , food is empty\")\n    }\n\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "/* Food Item Styles */\n.food-container {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between; /* Ensures that header and footer are pushed to the top and bottom */\n  width: 200px;\n  min-height: 120px;\n  background: #E7ECF2;\n  border-radius: 4px;\n  padding: 10px;\n  margin-bottom: 10px;\n}\n\n/* Rest of your CSS */\n\n\n.food-price,\n.food-name {\n  text-align: center;\n  font-family: Inter, sans-serif;\n  font-weight: 400;\n}\n\n.food-price {\n  color: #D80027;\n  font-size: 10px;\n}\n\n.food-name {\n  font-size: 14px;\n  color: #2D333F;\n  word-wrap: break-word;\n}\n\n.food-actions {\n  display: flex;\n  justify-content: space-between; /* Distribute buttons evenly */\n  width: 100%; /* Take the full width of the container */\n  padding-top: 10px; /* Add some padding on top of the action buttons */\n}\n\n/* Button Styles */\nbutton {\n  flex: 1; /* Each button will take up equal space */\n  height: 27px;\n  background: white;\n  border-radius: 4px;\n  border: none;\n  cursor: pointer;\n  margin: 0 5px; /* Add margin to the left and right */\n}\n\nbutton:first-child {\n  background-color: #35BCAA;\n}\n\n",
+                    "styleUrl": "./food.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "foodBasketService",
+                        "type": "FoodBasketService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 14,
+                "jsdoctags": [
+                    {
+                        "name": "foodBasketService",
+                        "type": "FoodBasketService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<!-- food-item.component.html -->\n<div class=\"food-container\">\n    <div class=\"food-price\">{{ food?.price | currency:'EUR':'symbol-narrow' }}</div>\n    <div class=\"food-name\">{{ food?.name }}</div>\n    <div class=\"food-actions\">\n      <button (click)=\"add()\">+</button>\n      <button (click)=\"remove()\">-</button>\n    </div>\n\n    <div class=\"food-extras\" *ngFor=\"let extra of currentFood?.extras\">\n      <app-food-extra [foodExtra]=\"extra\" [food]=\"currentFood!\"></app-food-extra>\n    </div>  \n \n  </div>\n  \n  "
+        },
+        {
+            "name": "FoodExtraComponent",
+            "id": "component-FoodExtraComponent-1f2891d0d92c500ee3d3773c6ff51104d1121a115d673303aa063e129ef44823da143d20324677d9ff1747fdc7dd3245a82e3cdd7654496855f59c46865bc3c9",
+            "file": "src/app/components/food-extra/food-extra.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-food-extra",
+            "styleUrls": [
+                "./food-extra.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./food-extra.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "food",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "Food",
+                    "decorators": []
+                },
+                {
+                    "name": "foodExtra",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "FoodExtra",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "add",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 14,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "remove",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 34,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { FoodExtra } from 'src/app/shared/models/FoodExtra';\nimport { Food } from 'src/app/shared/models/Food';\n@Component({\n  selector: 'app-food-extra',\n  templateUrl: './food-extra.component.html',\n  styleUrls: ['./food-extra.component.css']\n})\nexport class FoodExtraComponent {\n\n  @Input() foodExtra!: FoodExtra;\n  @Input() food!: Food;\n  \n  add() {\n    if (this.food) {\n      // 'extras' dizisinde 'foodExtra' objesini bul veya yoksa 'undefined' döndür.\n      const extra = this.food.extras.find(e => e.plu === this.foodExtra.plu);\n  \n      if (extra) {\n        // Eğer 'foodExtra' zaten varsa, 'quantity' değerini arttır.\n        extra.quantity = (extra.quantity || 0) + 1;\n      } else {\n        // Eğer 'foodExtra' bulunamazsa, 'foodExtra' objesine 'quantity' değeri ekleyip 'extras' dizisine ekle.\n        this.foodExtra.quantity = 1; // 'foodExtra' için 'quantity' değerini 1 yap.\n     \n      }\n    } else {\n      console.error('Cannot add to extra because food is undefined');\n    }\n  }\n  \n \n\n  remove() {\n    if (this.food && this.food.extras) {\n      // 'extras' dizisinde 'foodExtra' objesini bul\n      const extra = this.food.extras.find(e => e.plu === this.foodExtra.plu);\n  \n      if (extra) {\n        // Eğer 'quantity' 1'den büyükse, bir azalt\n        if (extra.quantity && extra.quantity >= 1) {\n          extra.quantity -= 1;\n        } \n      }\n    } else {\n      console.error('Cannot remove extra because food or food.extras is undefined');\n    }\n  }\n  \n  \n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "/* Food Item Styles */\n.food-extra-container {\n    background: #E7ECF2;\n    border-radius: 4px;\n    display: flex;\n    align-items: center;\n    padding: 5px;\n  }\n  \n  .food-extra-price,\n  .food-extra-name {\n    text-align: center;\n    font-family: Inter, sans-serif;\n    font-weight: 400;\n    margin: 0; /* Reset margin for consistency */\n  }\n  \n  .food-extra-price {\n    color: #D80027;\n    font-size: 10px;\n    margin: 5px;\n  }\n  \n  .food-extra-name {\n    font-size: 10px;\n    color: #2D333F;\n    word-wrap: break-word;\n  }\n  \n  .food-extra-actions {\n    display: flex;\n    align-items: center;\n    margin-left: 10px; /* Spacing between text and buttons */\n  }\n  \n  /* Button Styles */\n  button {\n    width: 25px; /* Adjusted for better clickability */\n    height: 25px; /* Adjusted for better clickability */\n    background: white;\n    border-radius: 4px;\n    border: 1px solid #ddd; /* Add border for definition */\n    cursor: pointer;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 0;\n  }\n  \n  button.food-extra-add {\n    margin-right: 5px;\n  }\n  \n  button.food-extra-remove {\n    background-color: #35BCAA;\n    color: white; /* For better visibility against the background */\n  }\n  ",
+                    "styleUrl": "./food-extra.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"food-extra-container\">\n    <div class=\"food-extra-price\">{{ foodExtra.price | currency:'EUR':'symbol-narrow' }}</div>\n    <div class=\"food-extra-name\">{{ foodExtra.name }}</div>\n    <div class=\"food-extra-actions\">\n      <button (click)=\"add()\">+</button>\n      <button (click)=\"remove()\">-</button>\n</div>\n  "
+        },
+        {
+            "name": "FoodFilterComponent",
+            "id": "component-FoodFilterComponent-6c60188d9a5408ed27b6d78ad91d246afa88e36a21abd86072faf14b8f06bda378ba7c02fb5d85013033636021d67a96ceeaa269da5609f12ae0b823e6998eab",
+            "file": "src/app/components/food-filter/food-filter.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-food-filter",
+            "styleUrls": [
+                "./food-filter.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./food-filter.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "selectedCategory",
+                    "defaultValue": "new EventEmitter<string>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "categories",
+                    "defaultValue": "CATEGORIES_MOCK",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "updateCategory",
+                    "args": [
+                        {
+                            "name": "newCategory",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "newCategory",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Output } from '@angular/core';\nimport { CATEGORIES_MOCK } from 'src/app/mocks/category.mock';\n@Component({\n  selector: 'app-food-filter',\n  templateUrl: './food-filter.component.html',\n  styleUrls: ['./food-filter.component.css']\n})\nexport class FoodFilterComponent {\n  @Output() selectedCategory = new EventEmitter<string>();\n  categories = CATEGORIES_MOCK; // Ekleme yapın\n\n  updateCategory(newCategory: string) {\n    this.selectedCategory.emit(newCategory);\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".filter-wrapper {\n  /* Additional wrapper styles if necessary */\n}\n\n.category-list {\n  padding: 0;\n  margin: 0;\n  list-style-type: none;\n}\n\n.category-item {\n  width: 151px; /* as per your provided style */\n  height: 44px;\n  background: #e7ecf2;\n  border-radius: 4px;\n  margin-bottom: 10px; /* space between items */\n  display: flex;\n  align-items: center; /* vertical center */\n  justify-content: center; /* horizontal center */\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.category-item:last-child {\n  margin-bottom: 0; /* remove bottom margin from the last item */\n}\n\n.category-item:hover {\n  background-color: darken(#e7ecf2, 10%); /* Slightly darken on hover */\n}\n.category-title {\n  width: 151px;\n  height: 44px;\n  background: #2d333f;\n  border-radius: 4px;\n  color: white;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n",
+                    "styleUrl": "./food-filter.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<!-- food-filter.component.html -->\n<div class=\"filter-wrapper\">\n    <!-- Product Category Title -->\n    <div class=\"category-title\">\n      Product Category\n    </div>\n  \n    <!-- Category List -->\n    <ul class=\"category-list\">\n      <li class=\"category-item\" (click)=\"updateCategory('All')\">All</li>\n      <!-- The rest of the items generated with *ngFor directive -->\n      <li *ngFor=\"let category of categories\" \n          class=\"category-item\" \n          (click)=\"updateCategory(category.name)\">\n        {{ category.name }}\n      </li>\n    </ul>\n  </div>\n  "
+        },
+        {
+            "name": "FoodListComponent",
+            "id": "component-FoodListComponent-84dbc5c8531eb0063c379bb13392c12f662055dafd66dcc83b29512b8e76a52cfd74fe85764085a17a267ca31e493f380c98d1b0c511069463c3f39fc46fce81",
+            "file": "src/app/components/food-list/food-list.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-food-list",
+            "styleUrls": [
+                "./food-list.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./food-list.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "category",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "foods",
+                    "defaultValue": "FOODS_MOCK",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "Food[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "filteredFoods",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Food[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "applyFilter",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 26,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnChanges",
+                    "args": [
+                        {
+                            "name": "changes",
+                            "type": "SimpleChanges",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 16,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "changes",
+                            "type": "SimpleChanges",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';\nimport { Food } from 'src/app/shared/models/Food'; \nimport { FOODS_MOCK } from 'src/app/mocks/food.mock';\n\n@Component({\n  selector: 'app-food-list',\n  templateUrl: './food-list.component.html',\n  styleUrls: ['./food-list.component.css']\n})\nexport class FoodListComponent {\n  @Input() category?: string;\n  @Input()foods: Food[] = FOODS_MOCK;\n  filteredFoods: Food[] = [];\n  \n\n  ngOnChanges(changes: SimpleChanges) {\n    if (changes['category']) {\n      this.applyFilter();\n    }\n  }\n  ngOnInit() {\n    this.category='all'\n    this.applyFilter(); \n  }\n\n  applyFilter() {\n    console.log('Category:', this.category);\n    if (this.category?.toLocaleLowerCase() === 'all') {\n      this.filteredFoods = this.foods;\n    } else {\n      this.filteredFoods = this.foods.filter(food => food.category.toLowerCase() === this.category?.toLowerCase());\n    }\n  }\n  \n  \n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".food-list-container {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    grid-gap: 10px; /* Aralığı azalt */\n    padding: 10px; /* Dış padding */\n    height: 500px; /* Örnek olarak belirlenmiş bir yükseklik, ihtiyacınıza göre ayarlayın */\n    overflow-y: auto; /* Gerektiğinde dikey kaydırma çubuğunu göster */\n}\n\n.food {\n    /* Flex özelliğini kullanmıyorsanız bu kısma gerek yok */\n    margin-bottom: 10px; /* Alt margini azalt */\n}\n",
+                    "styleUrl": "./food-list.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<p>sdas</p>\n\n<div class=\"food-list-container\">\n    <div class=\"food\" *ngFor=\"let food of filteredFoods\">\n      <app-food [food]=\"food\"></app-food>\n    </div>\n  </div>\n  "
+        },
+        {
+            "name": "HeaderComponent",
+            "id": "component-HeaderComponent-3d494fd89671305c6be07de00e019efdf08f2e36c2169e5fb75a5acdb2841da927e3ef3cbd21cc18f478373a784b1fb90e8b63b9df4b3498a75b652bd9c37b38",
+            "file": "src/stories/header.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-header",
+            "styleUrls": [
+                "./header.css"
+            ],
+            "styles": [],
+            "template": "<header>    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 65,
+                    "type": "User | null",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onCreateAccount",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 74,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogin",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 68,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogout",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 71,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport type { User } from './User';\n\n@Component({\n  selector: 'storybook-header',\n  template: `<header>\n    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>`,\n  styleUrls: ['./header.css'],\n})\nexport default class HeaderComponent {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-header {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.storybook-header svg {\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-header h1 {\n  font-weight: 700;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-header button + button {\n  margin-left: 10px;\n}\n\n.storybook-header .welcome {\n  color: #333;\n  font-size: 14px;\n  margin-right: 10px;\n}\n",
+                    "styleUrl": "./header.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "OrderSummaryComponent",
+            "id": "component-OrderSummaryComponent-ca6b282742de9427862092fec367e70589f8765ac21abc37b982c0b8b66707768781fad1272e13e5da61395778cd90f4642949e18278851fc621d7f744dc3901",
+            "file": "src/app/components/order-summary/order-summary.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-order-summary",
+            "styleUrls": [
+                "./order-summary.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./order-summary.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "basketSubscription",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Subscription",
+                    "optional": true,
+                    "description": "",
+                    "line": 14,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "foods",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Food[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "cancelOrder",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 49,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "getGrandTotal",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "number",
+                    "typeParameters": [],
+                    "line": 45,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "getTotalPrice",
+                    "args": [
+                        {
+                            "name": "food",
+                            "type": "Food",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "number",
+                    "typeParameters": [],
+                    "line": 34,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "food",
+                            "type": "Food",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnDestroy",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 27,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';\nimport { FoodBasketService } from '../../services/food-basket/food-basket.service';\nimport { Food } from 'src/app/shared/models/Food';\nimport { Subscription } from 'rxjs';\n\n\n@Component({\n  selector: 'app-order-summary',\n  templateUrl: './order-summary.component.html',\n  styleUrls: ['./order-summary.component.css']\n})\nexport class OrderSummaryComponent implements OnInit{\n  foods: Food[] = [];\n  private basketSubscription?: Subscription;\n\n  constructor(private foodBasketService: FoodBasketService) {}\n\n  ngOnInit() {\n    // Servisten gelen sepet verisini dinleyin\n    this.basketSubscription = this.foodBasketService.foodsInBasket$.subscribe(\n      (foodsInBasket: Food[]) => {\n        this.foods = foodsInBasket;\n      }\n    );\n  }\n\n  ngOnDestroy() {\n    this.basketSubscription?.unsubscribe();\n  }\n\n\n\n  \n  getTotalPrice(food: Food): number {\n    let total = food.price * (food.quantity ?? 0); // Eğer quantity null veya undefined ise varsayılan olarak 1 al.\n  \n    food.extras.forEach(extra => {\n      total += extra.price * (extra.quantity ?? 0); // Eğer extra.quantity null veya undefined ise varsayılan olarak 1 al.\n    });\n  \n    return total;\n  }\n  \n\n  getGrandTotal(): number {\n    return this.foods.reduce((total, food) => total + this.getTotalPrice(food), 0);\n  }\n\n  cancelOrder() {\n    this.foodBasketService.clearBasket(); // Sepeti servis kullanarak boşalt\n    // Burada kullanıcıya bir bildirim gösterilebilir.\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".order-summary-table {\n  width: 30%;\n  border-collapse: collapse;\n  margin-top: 20px;\n  background: #ffffff; /* Beyaz arka plan */\n  font-family: Inter;\n\n  \n}\n\n.order-summary-table th,\n.order-summary-table td {\n  padding: 12px 15px;\n  text-align: left;\n  font-size: 12px; /* Genel font büyüklüğü */\n  font-weight: 500; /* Genel font kalınlığı */\n  line-height: 15px; /* Genel satır yüksekliği */\n  letter-spacing: 0px; /* Genel harf aralığı */\n}\n.order-summary-table tbody{\n  max-height: 400px; /* Tablonun maksimum yüksekliğini sınırlar */\n  overflow-y: auto;\n  border-collapse: collapse;\n\n}\n\n.order-summary-table th {\n  background-color: #2d333f; /* Başlık arka plan */\n  color: #ffffff; /* Başlık yazı rengi */\n  font-weight: 600; /* Başlık font kalınlığı */\n}\n\n.order-summary-table tr:nth-child(even) {\n  background-color: #e7ecf2; /* Çift sıraların arka plan rengi */\n}\n\n.order-summary-table tr:hover {\n  background-color: #35bcaa; /* Üzerine gelindiğinde sıraların arka plan rengi */\n}\n\n.total-price {\n  text-align: right;\n  font-size: 16px; /* Toplam fiyat font büyüklüğü */\n  font-weight: 500; /* Toplam fiyat font kalınlığı */\n  line-height: 19px; /* Toplam fiyat satır yüksekliği */\n  letter-spacing: 0em; /* Toplam fiyat harf aralığı */\n  background: #dc3545; /* Toplam fiyat arka plan rengi */\n  color: #ffffff; /* Toplam fiyat yazı rengi */\n}\n\n.cancel-button {\n  padding: 10px 20px;\n  border-radius: 4px;\n  border: 1px solid #dc3545;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 10px;\n  background: transparent;\n  cursor: pointer;\n}\n\n.cancel-button-text {\n  color: #dc3545;\n  font-size: 14px;\n  font-family: \"Inter\", sans-serif; /* Ensure 'Inter' font is loaded in your project */\n  font-weight: 500;\n  word-wrap: break-word;\n  text-align: center; /* To center the text inside the button */\n}\n\n.total-price-value {\n  width: 347px;\n  height: 44px;\n  flex-shrink: 0;\n  border-radius: 0px 0px 4px 4px;\n  background: var(--Text-Main-Color, #2d333f);\n}\n\n.total-price-value-text {\n  display: flex; /* Flexbox modelini kullanarak */\n  justify-content: center; /* Metni yatay olarak ortalar */\n  align-items: center; /* Metni dikey olarak ortalar */\n  color: #35bcaa;\n  font-size: 16px;\n  font-family: \"Inter\", sans-serif;\n  font-weight: 500;\n  word-wrap: break-word; /* Uzun kelime taşmalarını önlemek için */\n  height: 100%; /* Ebeveyn elementin yüksekliğini dolduracak şekilde ayarlayın */\n  text-align: center; /* Metni yatay olarak ortalar, tek satır için kullanılır */\n}\n\n.order-summary-container {\n\n  background: #ffffff;\n  font-family: Inter;\n  max-height: 400px;\n  overflow-y: auto;\n}\n\n.cancel-button-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n",
+                    "styleUrl": "./order-summary.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "foodBasketService",
+                        "type": "FoodBasketService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 14,
+                "jsdoctags": [
+                    {
+                        "name": "foodBasketService",
+                        "type": "FoodBasketService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<!-- src/app/components/order-summary/order-summary.component.html -->\n<div class=\"order-summary-container\">\n  <table class=\"order-summary-table\">\n    <thead>\n      <tr>\n        <th>PLU</th>\n        <th>Name</th>\n        <th>Amt.</th>\n        <th>Price</th>\n        <th>Item Total</th>\n      </tr>\n    </thead>\n    <tbody class=\"scrollable-tbody\">\n      <ng-container *ngFor=\"let food of foods; let i = index\">\n        <tr>\n          <td>{{ food.plu }}</td>\n          <td>\n            {{ food.name }}\n\n            <ng-container *ngFor=\"let extra of food.extras\">\n              <span *ngIf=\"extra.quantity && extra.quantity > 0\"\n                >+{{ extra.name }} (x{{ extra.quantity }})<br\n              /></span>\n            </ng-container>\n          </td>\n\n     \n\n          <td>\n            {{ food.quantity }}\n            <ng-container *ngFor=\"let extra of food.extras\">\n                <br/>\n              <span *ngIf=\"extra.quantity && extra.quantity > 0\"\n                >{{ food.quantity  }}</span>\n            </ng-container>\n          </td>\n\n          <td>\n            {{ food.price | currency : \"EUR\" : \"symbol-narrow\" }}\n            <ng-container *ngFor=\"let extra of food.extras\">\n              <span *ngIf=\"extra.quantity && extra.quantity > 0\"\n                >{{ extra.price | currency : \"EUR\" : \"symbol-narrow\" }} <br\n              /></span>\n            </ng-container>\n          </td>\n          <td>\n            {{ getTotalPrice(food) | currency : \"EUR\" : \"symbol-narrow\" }}\n          </td>\n        </tr>\n      </ng-container>\n    </tbody>\n\n    <tfoot>\n        <tr>\n            <td colspan=\"5\" class=\"total-price-value\">\n              <span class=\"total-price-value-text\">{{ getGrandTotal() | currency:'EUR':'symbol-narrow' }}</span>\n            </td>\n          </tr>\n          <div class=\"cancel-button-container\">\n            <button (click)=\"cancelOrder()\" class=\"cancel-button\">\n              <span class=\"cancel-button-text\">Cancel</span>\n            </button>\n          </div>\n          \n    </tfoot>\n  </table>\n</div>\n\n\n\n"
+        },
+        {
+            "name": "PageComponent",
+            "id": "component-PageComponent-badb6d8cee577661da79ba82ad8f599604afd40fa34e36c7b88d71d77a4fbc7184228cba2f0d73e255d0b7bc51c4c7a8e7b0128b3624aeb0255abab9030fa59a",
+            "file": "src/stories/page.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-page",
+            "styleUrls": [
+                "./page.css"
+            ],
+            "styles": [],
+            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "User | null",
+                    "optional": false,
+                    "description": "",
+                    "line": 64
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "doCreateAccount",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 74,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "doLogin",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 70,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "doLogout",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 66,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport type { User } from './User';\n\n@Component({\n  selector: 'storybook-page',\n  template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n  styleUrls: ['./page.css'],\n})\nexport default class PageComponent {\n  user: User | null = null;\n\n  doLogout() {\n    this.user = null;\n  }\n\n  doLogin() {\n    this.user = { name: 'Jane Doe' };\n  }\n\n  doCreateAccount() {\n    this.user = { name: 'Jane Doe' };\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-page {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\n.storybook-page h2 {\n  font-weight: 700;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-page p {\n  margin: 1em 0;\n}\n\n.storybook-page a {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\n.storybook-page ul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\n.storybook-page li {\n  margin-bottom: 8px;\n}\n\n.storybook-page .tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\n.storybook-page .tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\n.storybook-page .tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\n.storybook-page .tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
+                    "styleUrl": "./page.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": []
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-8492227f9b6daa4b1e45841783927734920ba7fc756e8158886d38a7a1ee933b0422deb6a21a7ed0a67c597925b2f4ffb3e5b278145a71cfb244253cd6fabc8a",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { OrderSummaryComponent } from './components/order-summary/order-summary.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { MatTableModule } from '@angular/material/table';\nimport { FoodBasketService} from './services/food-basket/food-basket.service';\nimport { FoodExtraComponent } from './components/food-extra/food-extra.component';\nimport { FoodListComponent } from './components/food-list/food-list.component';\nimport { FoodFilterComponent } from './components/food-filter/food-filter.component'\nimport { FormsModule } from '@angular/forms';\nimport { FoodComponent } from './components/food/food.component';\n@NgModule({\n  declarations: [\n    AppComponent,\n    FoodComponent,\n    OrderSummaryComponent,\n    FoodExtraComponent,\n    FoodListComponent,\n    FoodFilterComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    BrowserAnimationsModule,\n    MatTableModule,\n    FormsModule\n\n  ],\n  providers: [FoodBasketService],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": [
+                        {
+                            "name": "FoodBasketService"
+                        }
+                    ]
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        },
+                        {
+                            "name": "FoodComponent"
+                        },
+                        {
+                            "name": "FoodExtraComponent"
+                        },
+                        {
+                            "name": "FoodFilterComponent"
+                        },
+                        {
+                            "name": "FoodListComponent"
+                        },
+                        {
+                            "name": "OrderSummaryComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppRoutingModule",
+            "id": "module-AppRoutingModule-b858b51d6f1d73bc66f6a988dfcfa1c54b3027507728bedb9283b91a07ac0d5d2634ee6d2e61998ed5e8f35c2ccb2f44cf5529f8676a0b52010ee6d40cab7fcd",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { OrderSummaryComponent } from './components/order-summary/order-summary.component';\n\nconst routes: Routes = [\n\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "CATEGORIES_MOCK",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/mocks/category.mock.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Category[]",
+                "defaultValue": "[\n    {\n        \"id\": 1,\n        \"name\": \"Daily\",\n        \"description\": \"Daily specials that bring you the variety every day.\"\n      },\n      {\n        \"id\": 2,\n        \"name\": \"Ala Carte\",\n        \"description\": \"Select from our premium dishes prepared upon request.\"\n      },\n      {\n        \"id\": 3,\n        \"name\": \"Dessert\",\n        \"description\": \"Sweet and savory treats to delight your taste buds.\"\n      },\n      {\n        \"id\": 4,\n        \"name\": \"Lunch\",\n        \"description\": \"Perfect midday meals to keep you going.\"\n      },\n      {\n        \"id\": 5,\n        \"name\": \"Drink\",\n        \"description\": \"Refreshing beverages to quench your thirst.\"\n      }\n]"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/food/food.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/food-list/food-list.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "FilteredByCategory",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/food-list/food-list.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "FOODS_MOCK",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/mocks/food.mock.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Food[]",
+                "defaultValue": "[\n    // Daily Category Foods\n    {\n        plu: 1,\n        name: 'Quinoa Salad',\n        price: 12.99,\n        category: 'Daily',\n        extras: []\n    },\n    {\n        plu: 2,\n        name: 'Grilled Chicken Breast',\n        price: 15.99,\n        category: 'Daily',\n        extras: []\n    },\n    // Ala Carte Category Foods\n    {\n        plu: 3,\n        name: 'Steak with Vegetables',\n        price: 25.99,\n        category: 'Ala Carte',\n        extras: [\n            { plu: 2001, name: 'Blue Cheese Sauce', price: 3.00 },\n            { plu: 2002, name: 'Garlic Bread', price: 1.99 },\n        ]\n    },\n    {\n        plu: 4,\n        name: 'Grilled Salmon',\n        price: 22.99,\n        category: 'Ala Carte',\n        extras: []\n    },\n    // Dessert Category Foods\n    {\n        plu: 5,\n        name: 'Chocolate Lava Cake',\n        price: 6.99,\n        category: 'Dessert',\n        extras: [\n            { plu: 3001, name: 'Vanilla Ice Cream', price: 1.50 },\n        ]\n    },\n    {\n        plu: 6,\n        name: 'Cheesecake',\n        price: 7.99,\n        category: 'Dessert',\n        extras: []\n    },\n    // Lunch Category Foods\n    {\n        plu: 7,\n        name: 'Chicken Caesar Wrap',\n        price: 9.99,\n        category: 'Lunch',\n        extras: []\n    },\n    {\n        plu: 8,\n        name: 'Veggie Panini',\n        price: 8.99,\n        category: 'Lunch',\n        extras: []\n    },\n    // Drink Category Foods\n    {\n        plu: 9,\n        name: 'Iced Latte',\n        price: 3.99,\n        category: 'Drink',\n        extras: [\n            { plu: 5001, name: 'Extra Shot', price: 1.00 },\n        ]\n    },\n    {\n        plu: 10,\n        name: 'Fresh Orange Juice',\n        price: 4.99,\n        category: 'Drink',\n        extras: []\n    }\n]"
+            },
+            {
+                "name": "Large",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = await canvas.getByRole('button', {\n      name: /Log in/i,\n    });\n    await userEvent.click(loginButton);\n  },\n}"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Button>",
+                "defaultValue": "{\n  title: 'Example/Button',\n  component: Button,\n  tags: ['autodocs'],\n  render: (args: Button) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Header>",
+                "defaultValue": "{\n  title: 'Example/Header',\n  component: Header,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [Button],\n      imports: [CommonModule],\n    }),\n  ],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Page>",
+                "defaultValue": "{\n  title: 'Example/Page',\n  component: Page,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n  decorators: [\n    moduleMetadata({\n      declarations: [Button, Header],\n      imports: [CommonModule],\n    }),\n  ],\n}"
+            },
+            {
+                "name": "mockFoods",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/order-summary/order-summary.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Food[]",
+                "defaultValue": "[\n  {\n    plu: 1,\n    name: 'Margherita Pizza',\n    price: 10.0,\n    category: 'Italian',\n    quantity: 2,\n    extras: [\n      { plu: 101, name: 'Extra Cheese', price: 2.0, quantity: 1 },\n      { plu: 102, name: 'Garlic Sauce', price: 1.0, quantity: 1 }\n    ]\n  },\n  {\n    plu: 2,\n    name: 'Vegan Burger',\n    price: 8.0,\n    category: 'Fast Food',\n    quantity: 1,\n    extras: [\n      { plu: 103, name: 'Fries', price: 3.0, quantity: 1 },\n      { plu: 104, name: 'Coke', price: 1.5, quantity: 1 }\n    ]\n  }\n]"
+            },
+            {
+                "name": "Ordered",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/order-summary/order-summary.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "preview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": ".storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Preview",
+                "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "Small",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/food/food.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<FoodComponent>",
+                "defaultValue": "(args: FoodComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/food-extra/food-extra.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<FoodExtraComponent>",
+                "defaultValue": "(args: FoodExtraComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/food-list/food-list.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<FoodListComponent>",
+                "defaultValue": "(args) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/order-summary/order-summary.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<OrderSummaryComponent>",
+                "defaultValue": "(args) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "WithExtrasAdded",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/food-extra/food-extra.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Button>",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Header>",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Page>",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/app/mocks/category.mock.ts": [
+                {
+                    "name": "CATEGORIES_MOCK",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/mocks/category.mock.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Category[]",
+                    "defaultValue": "[\n    {\n        \"id\": 1,\n        \"name\": \"Daily\",\n        \"description\": \"Daily specials that bring you the variety every day.\"\n      },\n      {\n        \"id\": 2,\n        \"name\": \"Ala Carte\",\n        \"description\": \"Select from our premium dishes prepared upon request.\"\n      },\n      {\n        \"id\": 3,\n        \"name\": \"Dessert\",\n        \"description\": \"Sweet and savory treats to delight your taste buds.\"\n      },\n      {\n        \"id\": 4,\n        \"name\": \"Lunch\",\n        \"description\": \"Perfect midday meals to keep you going.\"\n      },\n      {\n        \"id\": 5,\n        \"name\": \"Drink\",\n        \"description\": \"Refreshing beverages to quench your thirst.\"\n      }\n]"
+                }
+            ],
+            "src/app/components/food/food.component.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/food/food.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/food/food.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<FoodComponent>",
+                    "defaultValue": "(args: FoodComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/components/food-list/food-list.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/food-list/food-list.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "FilteredByCategory",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/food-list/food-list.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/food-list/food-list.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<FoodListComponent>",
+                    "defaultValue": "(args) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/mocks/food.mock.ts": [
+                {
+                    "name": "FOODS_MOCK",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/mocks/food.mock.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Food[]",
+                    "defaultValue": "[\n    // Daily Category Foods\n    {\n        plu: 1,\n        name: 'Quinoa Salad',\n        price: 12.99,\n        category: 'Daily',\n        extras: []\n    },\n    {\n        plu: 2,\n        name: 'Grilled Chicken Breast',\n        price: 15.99,\n        category: 'Daily',\n        extras: []\n    },\n    // Ala Carte Category Foods\n    {\n        plu: 3,\n        name: 'Steak with Vegetables',\n        price: 25.99,\n        category: 'Ala Carte',\n        extras: [\n            { plu: 2001, name: 'Blue Cheese Sauce', price: 3.00 },\n            { plu: 2002, name: 'Garlic Bread', price: 1.99 },\n        ]\n    },\n    {\n        plu: 4,\n        name: 'Grilled Salmon',\n        price: 22.99,\n        category: 'Ala Carte',\n        extras: []\n    },\n    // Dessert Category Foods\n    {\n        plu: 5,\n        name: 'Chocolate Lava Cake',\n        price: 6.99,\n        category: 'Dessert',\n        extras: [\n            { plu: 3001, name: 'Vanilla Ice Cream', price: 1.50 },\n        ]\n    },\n    {\n        plu: 6,\n        name: 'Cheesecake',\n        price: 7.99,\n        category: 'Dessert',\n        extras: []\n    },\n    // Lunch Category Foods\n    {\n        plu: 7,\n        name: 'Chicken Caesar Wrap',\n        price: 9.99,\n        category: 'Lunch',\n        extras: []\n    },\n    {\n        plu: 8,\n        name: 'Veggie Panini',\n        price: 8.99,\n        category: 'Lunch',\n        extras: []\n    },\n    // Drink Category Foods\n    {\n        plu: 9,\n        name: 'Iced Latte',\n        price: 3.99,\n        category: 'Drink',\n        extras: [\n            { plu: 5001, name: 'Extra Shot', price: 1.00 },\n        ]\n    },\n    {\n        plu: 10,\n        name: 'Fresh Orange Juice',\n        price: 4.99,\n        category: 'Drink',\n        extras: []\n    }\n]"
+                }
+            ],
+            "src/stories/Button.stories.ts": [
+                {
+                    "name": "Large",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Button>",
+                    "defaultValue": "{\n  title: 'Example/Button',\n  component: Button,\n  tags: ['autodocs'],\n  render: (args: Button) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
+                },
+                {
+                    "name": "Small",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+                }
+            ],
+            "src/stories/Header.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Header>",
+                    "defaultValue": "{\n  title: 'Example/Header',\n  component: Header,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [Button],\n      imports: [CommonModule],\n    }),\n  ],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+                }
+            ],
+            "src/stories/Page.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = await canvas.getByRole('button', {\n      name: /Log in/i,\n    });\n    await userEvent.click(loginButton);\n  },\n}"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Page>",
+                    "defaultValue": "{\n  title: 'Example/Page',\n  component: Page,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n  decorators: [\n    moduleMetadata({\n      declarations: [Button, Header],\n      imports: [CommonModule],\n    }),\n  ],\n}"
+                }
+            ],
+            "src/app/components/order-summary/order-summary.stories.ts": [
+                {
+                    "name": "mockFoods",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/order-summary/order-summary.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Food[]",
+                    "defaultValue": "[\n  {\n    plu: 1,\n    name: 'Margherita Pizza',\n    price: 10.0,\n    category: 'Italian',\n    quantity: 2,\n    extras: [\n      { plu: 101, name: 'Extra Cheese', price: 2.0, quantity: 1 },\n      { plu: 102, name: 'Garlic Sauce', price: 1.0, quantity: 1 }\n    ]\n  },\n  {\n    plu: 2,\n    name: 'Vegan Burger',\n    price: 8.0,\n    category: 'Fast Food',\n    quantity: 1,\n    extras: [\n      { plu: 103, name: 'Fries', price: 3.0, quantity: 1 },\n      { plu: 104, name: 'Coke', price: 1.5, quantity: 1 }\n    ]\n  }\n]"
+                },
+                {
+                    "name": "Ordered",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/order-summary/order-summary.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/order-summary/order-summary.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<OrderSummaryComponent>",
+                    "defaultValue": "(args) => ({\n  props: args,\n})"
+                }
+            ],
+            ".storybook/preview.ts": [
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": ".storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
+                }
+            ],
+            "src/app/components/food-extra/food-extra.component.stories.ts": [
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/food-extra/food-extra.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<FoodExtraComponent>",
+                    "defaultValue": "(args: FoodExtraComponent) => ({\n  props: args,\n})"
+                },
+                {
+                    "name": "WithExtrasAdded",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/food-extra/food-extra.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "src/stories/Button.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Button>",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/Header.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Header>",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/Page.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Page>",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ]
+        }
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "className": "AppModule",
+        "children": [
+            {
+                "name": "routes",
+                "filename": "src/app/app-routing.module.ts",
+                "module": "AppRoutingModule",
+                "children": [],
+                "kind": "module"
+            }
+        ]
+    },
+    "coverage": {
+        "count": 1,
+        "status": "low",
+        "files": [
+            {
+                "filePath": ".storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/food-extra/food-extra.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/food-extra/food-extra.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithExtrasAdded",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/food-extra/food-extra.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FoodExtraComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/food-filter/food-filter.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FoodFilterComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/food-list/food-list.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FoodListComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/food-list/food-list.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/food-list/food-list.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "FilteredByCategory",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/food-list/food-list.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/food/food.component.stories.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "MockFoodBasketService",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/food/food.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/food/food.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/food/food.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FoodComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/order-summary/order-summary.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "OrderSummaryComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/order-summary/order-summary.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "mockFoods",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/order-summary/order-summary.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Ordered",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/order-summary/order-summary.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/mocks/category.mock.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "CATEGORIES_MOCK",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/mocks/food.mock.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "FOODS_MOCK",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/services/category/category.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "CategoryService",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/services/food-basket/food-basket.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "FoodBasketService",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/services/food/food.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "FoodService",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/models/Category.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "Category",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/models/Food.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "Food",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/models/FoodExtra.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "FoodExtra",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/models/Order.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Order",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/User.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "User",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 83,
+                "coverageCount": "5/6",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeaderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/page.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PageComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            }
+        ]
+    }
+}

@@ -1,0 +1,70 @@
+<!-- src/app/components/order-summary/order-summary.component.html -->
+<div class="order-summary-container">
+  <table class="order-summary-table">
+    <thead>
+      <tr>
+        <th>PLU</th>
+        <th>Name</th>
+        <th>Amt.</th>
+        <th>Price</th>
+        <th>Item Total</th>
+      </tr>
+    </thead>
+    <tbody class="scrollable-tbody">
+      <ng-container *ngFor="let food of foods; let i = index">
+        <tr>
+          <td>{{ food.plu }}</td>
+          <td>
+            {{ food.name }}
+
+            <ng-container *ngFor="let extra of food.extras">
+              <span *ngIf="extra.quantity && extra.quantity > 0"
+                >+{{ extra.name }} (x{{ extra.quantity }})<br
+              /></span>
+            </ng-container>
+          </td>
+
+     
+
+          <td>
+            {{ food.quantity }}
+            <ng-container *ngFor="let extra of food.extras">
+                <br/>
+              <span *ngIf="extra.quantity && extra.quantity > 0"
+                >{{ food.quantity  }}</span>
+            </ng-container>
+          </td>
+
+          <td>
+            {{ food.price | currency : "EUR" : "symbol-narrow" }}
+            <ng-container *ngFor="let extra of food.extras">
+              <span *ngIf="extra.quantity && extra.quantity > 0"
+                >{{ extra.price | currency : "EUR" : "symbol-narrow" }} <br
+              /></span>
+            </ng-container>
+          </td>
+          <td>
+            {{ getTotalPrice(food) | currency : "EUR" : "symbol-narrow" }}
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="5" class="total-price-value">
+              <span class="total-price-value-text">{{ getGrandTotal() | currency:'EUR':'symbol-narrow' }}</span>
+            </td>
+          </tr>
+          <div class="cancel-button-container">
+            <button (click)="cancelOrder()" class="cancel-button">
+              <span class="cancel-button-text">Cancel</span>
+            </button>
+          </div>
+          
+    </tfoot>
+  </table>
+</div>
+
+
+
